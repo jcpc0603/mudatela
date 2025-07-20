@@ -37,7 +37,7 @@ body {
     background-size: cover;
     */
     background: var(--bg-url) no-repeat top center/cover;
-
+    height: 100vh;
 }
 
 body * {
@@ -191,4 +191,40 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+        /* background para desktop */
+    }
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+        /* background para desktop no modo claro */
+    }
+    body {
+        background: var(--bg-url) no-repeat top center/cover;
+    }
+
+    #container {
+        width: 100%;
+        max-width: 768px;
+        /* largura máxima do container */
+        margin: 56px auto 0px;
+        padding: 0 24px;
+    }
+
+    #profile img {
+        width: 128px;
+    }
+
+    ul li a {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #social-links {
+        font-size: 32px;
+    }
 }
